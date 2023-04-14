@@ -1,0 +1,18 @@
+<html>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        console.log(arr);
+        let pos = prompt("Enter position to delete");
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (i != pos-1) {
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(newArr);
+    </script>
+</body>
+
+</html>

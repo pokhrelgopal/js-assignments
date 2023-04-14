@@ -1,0 +1,57 @@
+<html>
+
+<body>
+    <script>
+        // Function invocation
+        function add(a, b) {
+            return a + b;
+        }
+
+        console.log(add(2, 3));
+
+        // Method invocation
+        const obj = {
+            x: 2,
+            y: 3,
+            add: function () {
+                return this.x + this.y;
+            }
+        };
+
+        console.log(obj.add());
+
+        // Constructor invocation
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        const john = new Person("John", 25);
+        console.log(john.name);
+
+        // Indirect invocation with call()
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        console.log(multiply.call(null, 2, 3));
+
+        // Indirect invocation with apply()
+        const arr = [2, 3];
+        console.log(multiply.apply(null, arr));
+
+        // Implicit invocation
+        const obj2 = {
+            x: 2,
+            y: 3,
+            add: function () {
+                return this.x + this.y;
+            }
+        };
+
+        console.log(obj2.add());
+
+    </script>
+</body>
+
+</html>
