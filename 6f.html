@@ -1,0 +1,30 @@
+<html>
+
+<body>
+
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            myAge: 30,
+            get age() {
+                return this.myAge;
+            },
+            set age(newAge) {
+                if (typeof newAge === "number" && newAge > 0 && newAge < 150) {
+                    this.myAge = newAge;
+                } else {
+                    console.log("Invalid age");
+                }
+            }
+        };
+
+        console.log(person.age);
+        person.age = 35;
+        console.log(person.age);
+        person.age = -10;
+
+    </script>
+</body>
+
+</html>
