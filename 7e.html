@@ -8,21 +8,18 @@
             return a + b;
         }
         console.log(sum.length);
-
         // Using Function.call() to call a function with a specified this value and arguments
         const person = { name: 'John' };
         function greet(message) {
             console.log(message + ', ' + this.name);
         }
         greet.call(person, 'Hello');
-
         // Using Function.apply() to call a function with a specified this value and an array of arguments
         const numbers = [1, 2, 3, 4, 5];
         function addNumbers(a, b, c, d, e) {
             return a + b + c + d + e;
         }
         console.log(addNumbers.apply(null, numbers));
-
         // Using Function.bind() to create a new function with a specified this value and arguments
         const subtract = function (a, b) {
             return a - b;
