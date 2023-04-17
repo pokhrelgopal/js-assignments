@@ -7,10 +7,8 @@
         try {
             throw new Error('Something went wrong');
         } catch (e) {
-            console.log(e.name);
+            console.log(e.name);console.log(e.message);console.log(e.stack);
         }
-        console.log(e.message);
-        console.log(e.stack);
     </script>
 </body>
 
