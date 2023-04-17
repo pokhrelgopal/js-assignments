@@ -1,0 +1,28 @@
+<html>
+
+<body>
+
+    <script>
+        // Using Object.keys() to get an array of an object's own enumerable properties
+        const obj = { name: 'John', age: 30, gender: 'male' };
+        console.log(Object.keys(obj));
+
+        // Using Object.values() to get an array of an object's own enumerable property values
+        console.log(Object.values(obj));
+
+        // Using Object.freeze() to freeze an object
+        Object.freeze(obj);
+        obj.name = 'Mary';
+        console.log(obj);
+
+        // Using Object.is() to compare two values for equality
+        console.log(Object.is(1, 1));
+
+        // Using Object.hasOwnProperty() to check if an object has a specific property
+        console.log(obj.hasOwnProperty('name'));
+        console.log(obj.hasOwnProperty('address'));
+
+    </script>
+</body>
+
+</html>
