@@ -3,17 +3,15 @@
 <body>
 
   <script>
-    function Car(make, model, year, color) {
-      this.make = make;
-      this.model = model;
-      this.year = year;
+    function Car(name,color) {
+      this.name = name;
       this.color = color;
       this.drive = function () {
-        console.log(`Driving the ${this.year} ${this.make} ${this.model}...`);
+        console.log(`I am driving a ${this.color} ${this.name}`);
       };
     }
 
-    const car1 = new Car("Toyota", "Corolla", 2020, "blue");
+    const car1 = new Car("Toyota","blue");
 
     car1.drive();
 
@@ -21,3 +19,7 @@
 </body>
 
 </html>
+
+
+
+

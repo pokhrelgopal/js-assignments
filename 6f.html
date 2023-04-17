@@ -6,13 +6,13 @@
         const person = {
             firstName: "John",
             lastName: "Doe",
-            myAge: 30,
+            ageValue: 30,
             get age() {
-                return this.myAge;
+                return this.ageValue;
             },
             set age(newAge) {
                 if (typeof newAge === "number" && newAge > 0 && newAge < 150) {
-                    this.myAge = newAge;
+                    this.ageValue = newAge;
                 } else {
                     console.log("Invalid age");
                 }
@@ -24,6 +24,7 @@
         console.log(person.age);
         person.age = -10;
 
+         
     </script>
 </body>
 
