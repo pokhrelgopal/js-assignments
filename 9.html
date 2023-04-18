@@ -32,7 +32,7 @@
                 if (hourString.length == 1) hourString = hourString.padStart(2, "0");
                 if (minString.length == 1) minString = minString.padStart(2, "0");
 
-                watch.innerHTML = `<span id="hour">${hourString}</span>:<span id="min">${minString}</span>:<span id="sec">${secString}</span>`;
+                watch.innerHTML = `${hourString}:${minString}:${secString}`;
 
             }, 1000);
             pause.addEventListener('click', () => {
@@ -40,10 +40,11 @@
             })
             reset.addEventListener('click', () => {
                 window.clearInterval(myInterval);
-                hour = "00";
-                min = "00";
-                sec = "00";
-                watch.innerHTML = `<span id="hour">${hour}</span>:<span id="min">${min}</span>:<span id="sec">${sec}</span>`;
+                // hour = "00";
+                // min = "00";
+                // sec = "00";
+                // watch.innerHTML = `<span id="hour">${hour}</span>:<span id="min">${min}</span>:<span id="sec">${sec}</span>`;
+                watch.innerHTML = "00:00:00"
             })
         })
     </script>
