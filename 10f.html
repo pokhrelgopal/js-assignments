@@ -1,0 +1,42 @@
+<html>
+
+<body>
+    <form>
+        <label>
+            Name:
+            <input type="text" name="name" id="name">
+        </label>
+        <br><br>
+        <label>
+            Password:
+            <input type="password" name="password" id="password">
+        </label>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const ni = document.getElementById('name');
+        const pi = document.getElementById('password');
+        const form = document.querySelector('form');
+
+        ni.addEventListener('focus', () => {
+            console.log('Name field has focus');
+        });
+
+        ni.addEventListener('blur', () => {
+            console.log('focus from name is gone');
+        });
+
+        pi.addEventListener('change', () => {
+            console.log('Password value changed');
+        });
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            console.log('Form submitted');
+        });
+    </script>
+</body>
+
+</html>
