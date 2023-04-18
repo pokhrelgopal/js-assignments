@@ -1,8 +1,47 @@
 <html>
 
 <body>
+    <label for="dob">Enter Date of Birth</label> <br>
+    <input id="dob" type="text" name="">
+    <button id="calculate">Calculate</button>
+    <h3 id="answer1"></h3>
+    <h3 id="answer2"></h3>
     <script>
+        const dob = document.getElementById('dob')
+        const answer1 = document.getElementById('answer1')
+        const answer2 = document.getElementById('answer2')
+        const calculate = document.getElementById('calculate')
 
+        calculate.addEventListener('click',function(){
+            inputDate = dob.value
+            let dt = new Date(inputDate);
+            let currentDate = new Date()
+
+            // Current Data
+            currentYear = currentDate.getFullYear()
+            currentMonth = currentDate.getMonth()+1
+            currentDay = currentDate.getDate()
+
+            // Entered Data
+            enteredYear = dt.getFullYear()
+            enteredMonth = dt.getMonth()+1
+            enteredDay = dt.getDate()
+
+            // Calculations
+            let ageYear = currentYear-enteredYear
+            let ageMonth = currentMonth-enteredMonth
+            let ageDay = currentDay-enteredDay
+            if(ageDay<0){
+                ageMonth=ageMonth-1
+                ageDay=30-(Math.abs(ageDay))
+            }
+            if(ageMonth<0){
+                ageYear=ageYear-1;
+                ageMonth = 12-(Math.abs(ageMonth))
+            }
+            answer1.innerHTML = `Your age in Year : ${ageYear} years.`
+            answer2.innerHTML = `Your age in Year, Month and Day : ${ageYear} years ${ageMonth} months ${ageDay} days.`
+        })
     </script>
 </body>
 
