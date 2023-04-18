@@ -1,0 +1,52 @@
+<html>
+<!-- Create a web page containing stop watch (must contain start, pause and reset buttons)  -->
+<body>
+    <h1 id="watch">
+    </h1>
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+    <script>
+        const start = document.getElementById('start')
+        const pause = document.getElementById('pause')
+        const reset = document.getElementById('reset')
+        let watch = document.getElementById('watch')
+        start.addEventListener('click', () => {
+            let sec = 0
+            let hour = 0
+            let min = 0
+            const myInterval = setInterval(() => {
+                sec = sec + 1;
+                if (sec == 60) {
+                    min = min + 1;
+                    sec = 0;
+                }
+                if (min == 60) {
+                    hour = hour + 1;
+                    min = 0;
+                }
+                secString = sec.toString();
+                hourString = hour.toString();
+                minString = min.toString();
+                if (secString.length == 1) secString = secString.padStart(2, "0");
+                if (hourString.length == 1) hourString = hourString.padStart(2, "0");
+                if (minString.length == 1) minString = minString.padStart(2, "0");
+
+                watch.innerHTML = `<span id="hour">${hourString}</span>:<span id="min">${minString}</span>:<span id="sec">${secString}</span>`;
+
+            }, 1000);
+            pause.addEventListener('click', () => {
+                window.clearInterval(myInterval);
+            })
+            reset.addEventListener('click', () => {
+                window.clearInterval(myInterval);
+                hour = "00";
+                min = "00";
+                sec = "00";
+                watch.innerHTML = `<span id="hour">${hour}</span>:<span id="min">${min}</span>:<span id="sec">${sec}</span>`;
+            })
+        })
+    </script>
+</body>
+
+</html>
