@@ -32,15 +32,15 @@
             let ageMonth = currentMonth-enteredMonth
             let ageDay = currentDay-enteredDay
             if(ageDay<0){
-                ageMonth=ageMonth-1
+                ageMonth-=1
                 ageDay=30-(Math.abs(ageDay))
             }
             if(ageMonth<0){
-                ageYear=ageYear-1;
+                ageYear-=1;
                 ageMonth = 12-(Math.abs(ageMonth))
             }
             answer1.innerHTML = `Your age in Year : ${ageYear} years.`
-            answer2.innerHTML = `Your age in Year, Month and Day : ${ageYear} years ${ageMonth} months ${ageDay} days.`
+            answer2.innerHTML = `Your full age : ${ageYear} years ${ageMonth} months and ${ageDay} days.`
         })
     </script>
 </body>
