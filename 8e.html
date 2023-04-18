@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <div class="container">
+        <p id="date"></p>
+        <h1 id="time"></h1>
+    </div>
+
+    <script>
+        const time = document.getElementById('time')
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        setInterval(() => {
+            time.innerHTML = `
+            ${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`
+        }, 1000);
+        date.innerHTML = `
+        ${days[new Date().getDay()]}  ${months[new Date().getMonth()]}  ${new Date().getFullYear()} 
+        `
+
+    </script>
+
+</body>
+
+</html>
