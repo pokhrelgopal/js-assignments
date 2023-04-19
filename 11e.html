@@ -1,5 +1,15 @@
 <html>
     <body>
-        <script></script>
+        <button id="reloadPage">Reload</button>
+        <script>
+            const reloadPage = document.getElementById("reloadPage");
+            console.log(location.href);
+            console.log(location.protocol);
+            console.log(location.host);
+            console.log(location.hostname);
+            console.log(location.port);
+            console.log(location.pathname);
+            reloadPage.addEventListener("click",()=>location.reload())
+        </script>
     </body>
 </html>

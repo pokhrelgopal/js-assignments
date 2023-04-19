@@ -1,5 +1,20 @@
 <html>
-    <body>
-        <script></script>
-    </body>
+<body>
+    <button onclick="testAssign()">Assign</button>
+    <button onclick="testReplace()">Replace</button>
+    <button onclick="testReload()">Reload</button>
+
+    <script>
+        function testAssign() {
+            location.assign("https://www.google.com");
+        }
+        function testReplace() {
+            location.replace("https://www.facebook.com");
+        }
+        function testReload() {
+            location.reload();
+        }
+    </script>
+</body>
+
 </html>
