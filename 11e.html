@@ -1,15 +1,20 @@
 <html>
     <body>
-        <button id="reloadPage">Reload</button>
+        <button onclick="reloadPage()">Reload</button>
         <script>
-            const reloadPage = document.getElementById("reloadPage");
+
             console.log(location.href);
             console.log(location.protocol);
             console.log(location.host);
             console.log(location.hostname);
             console.log(location.port);
             console.log(location.pathname);
-            reloadPage.addEventListener("click",()=>location.reload())
+            function reloadPage(){
+                location.reload();
+            }
         </script>
     </body>
 </html>
+
+<!-- e. WAP to illustrate the use of different properties of location object.
+ -->

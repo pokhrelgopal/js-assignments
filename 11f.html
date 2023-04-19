@@ -1,20 +1,23 @@
 <html>
 <body>
-    <button onclick="testAssign()">Assign</button>
-    <button onclick="testReplace()">Replace</button>
-    <button onclick="testReload()">Reload</button>
+    <button onclick="doAssign()">Assign</button>
+    <button onclick="doReplace()">Replace</button>
+    <button onclick="doReload()">Reload</button>
 
     <script>
-        function testAssign() {
+        function doAssign() {
             location.assign("https://www.google.com");
         }
-        function testReplace() {
+        function doReplace() {
             location.replace("https://www.facebook.com");
         }
-        function testReload() {
+        function doReload() {
             location.reload();
         }
     </script>
 </body>
 
 </html>
+
+<!-- WAP to illustrate the use of following methods of location object.
+assign() , replace() , reload() -->
