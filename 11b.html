@@ -1,5 +1,16 @@
 <html>
     <body>
-        <script></script>
+        <button id="btnOpen">Open</button>
+        <button id="btnClose">Close</button>
+        <script>
+            function openWindow(){
+                myWindow = window.open('11a.html','_blank','width=400,height=400')
+            }
+            function closeWindow(){
+                myWindow.close()
+            }
+            const btnOpen = document.getElementById('btnOpen').addEventListener('click',openWindow)
+            const btnClose = document.getElementById('btnClose').addEventListener('click',closeWindow)
+        </script>
     </body>
 </html>
