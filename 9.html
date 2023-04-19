@@ -1,5 +1,4 @@
 <html>
-<!-- Create a web page containing stop watch (must contain start, pause and reset buttons)  -->
 <body>
     <h1 id="watch">
     </h1>
@@ -40,10 +39,6 @@
             })
             reset.addEventListener('click', () => {
                 window.clearInterval(myInterval);
-                // hour = "00";
-                // min = "00";
-                // sec = "00";
-                // watch.innerHTML = `<span id="hour">${hour}</span>:<span id="min">${min}</span>:<span id="sec">${sec}</span>`;
                 watch.innerHTML = "00:00:00"
             })
         })
