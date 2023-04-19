@@ -1,0 +1,33 @@
+<!-- Create a web page to demonstrate the use of frame object with different properties
+and methods.  -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frame Object Example</title>
+</head>
+<body>
+	<iframe src="https://www.nepalhomes.com" name="myframe" width="600" height="400"></iframe>
+
+	<br><br>
+
+	<button onclick="changeSource()">Change Source</button>
+	<button onclick="changeSize()">Change Size</button>
+	<button onclick="changeBorder()">Change Border</button>
+
+	<script>
+		function changeSource() {
+			document.getElementsByName("myframe")[0].src = "https://www.techrastra.com";
+		}
+
+		function changeSize() {
+			document.getElementsByName("myframe")[0].width = "800";
+			document.getElementsByName("myframe")[0].height = "600";
+		}
+
+		function changeBorder() {
+			document.getElementsByName("myframe")[0].style.border = "5px solid red";
+		}
+	</script>
+
+</body>
+</html>
