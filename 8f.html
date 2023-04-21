@@ -1,7 +1,72 @@
 <html>
-    <body>
-        <script>
-            
-        </script>
-    </body>
+
+<body>
+    <!-- container for Current Date -->
+    Today's date is: <span id="date"></span><br><br>
+    <button id="beforeHours">Date Before Hours</button>
+    <input type="text" id="hours">
+    <button id="afterHours">Date After Hours</button>
+    <br><br>
+    <button id="beforeDays">Date Before Days</button>
+    <input type="text" id="days">
+    <button id="afterDays">Date After Days</button>
+
+    <!-- container for answer -->
+    <p id="message"></p>
+    <script>
+        // message display
+        const message = document.getElementById('message')
+        // container to put date
+        const dateData = document.getElementById('date')
+        // value taken from input box
+        const hoursValue = document.getElementById('hours')
+        const daysValue = document.getElementById('days')
+        // four buttons for four events
+        const beforeHours = document.getElementById('beforeHours')
+        const afterHours = document.getElementById('afterHours')
+        const beforeDays = document.getElementById('beforeDays')
+        const afterDays = document.getElementById('afterDays')
+
+        dateData.innerHTML = new Date()
+        let enteredData
+        
+        // to find what day it was before the entered hour
+        beforeHours.addEventListener('click', () => {
+            let enteredData = hoursValue.value*60*60*1000
+            let dateNow = new Date().getTime()
+            let added = dateNow-enteredData
+            let requiredDate = new Date(added)
+            document.getElementById('message').innerHTML=requiredDate
+        })
+
+        // to find what day it was after the entered hour
+        afterHours.addEventListener('click', () => {
+            let enteredData = hoursValue.value*60*60*1000
+            let dateNow = new Date().getTime()
+            let added = dateNow+enteredData
+            let requiredDate = new Date(added)
+            document.getElementById('message').innerHTML=requiredDate
+        })
+
+        // to find what day it was before the entered day
+        beforeDays.addEventListener('click', () => {
+            let enteredData = daysValue.value*24*60*60*1000
+            let dateNow = new Date().getTime()
+            let added = dateNow-enteredData
+            let requiredDate = new Date(added)
+            document.getElementById('message').innerHTML=requiredDate
+        })
+
+        // to find what day it was after the entered day
+        afterDays.addEventListener('click', () => {
+            let enteredData = daysValue.value*24*60*60*1000
+            let dateNow = new Date().getTime()
+            let added = dateNow+enteredData
+            let requiredDate = new Date(added)
+            document.getElementById('message').innerHTML=requiredDate
+        })
+    </script>
+
+</body>
+
 </html>
