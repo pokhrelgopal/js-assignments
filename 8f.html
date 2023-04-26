@@ -17,7 +17,7 @@
         // message display
         const message = document.getElementById('message')
         // container to put date
-        const dateData = document.getElementById('date')
+        const dateData = document.getElementById('date') 
         // value taken from input box
         const hoursValue = document.getElementById('hours')
         const daysValue = document.getElementById('days')
@@ -36,7 +36,7 @@
             let dateNow = new Date().getTime()
             let added = dateNow-enteredData
             let requiredDate = new Date(added)
-            document.getElementById('message').innerHTML=requiredDate
+            message.innerHTML=requiredDate
         })
 
         // to find what day it was after the entered hour

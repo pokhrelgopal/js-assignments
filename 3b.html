@@ -2,14 +2,17 @@
 
 <body>
     <script>
-     let num = prompt("Enter a number");
-    let sum = 0;
-    while(num>0){
-        let rem = num%10;
-        sum = sum + rem;
-        num = Math.floor(num/10);
-    }
-    alert(sum);
+        console.log("Gopal Pokhrel");
+        console.log("Roll No : 20");
+        let num = prompt("Enter a number");
+        let n=num;
+        let sum = 0;
+        while (num > 0) {
+            let rem = num % 10;
+            sum = sum + rem;
+            num = Math.floor(num / 10);
+        }
+        alert(`The sum of each digit of ${n} is ${sum}`);
     </script>
 </body>
 

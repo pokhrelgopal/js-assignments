@@ -3,16 +3,16 @@
 <body>
     <script>
         const person = {
-            name: 'Ram',age: 21,
+            name: 'Ram',roll: 2,
             greet() {
-                console.log("Name : " + this.name + " Age : " + this.age);
+                console.log("Name : " + this.name + " Roll : " + this.roll);
             }
         };
 
         const newPerson = Object.create(person);
 
         newPerson.name = 'Gopal';
-        newPerson.age = 22;
+        newPerson.roll = 22;
 
         newPerson.greet();
 

@@ -2,25 +2,27 @@
 
 <body>
     <script>
+        console.log("Gopal Pokhrel");
+        console.log("Roll No : 20");
         const num1 = +(prompt("First Number"))
         const num2 = +(prompt("Second Number"))
         const op = prompt("Operator")
         let result
         switch (op) {
             case "+":
-                alert(num1+num2);
+                alert(`${num1} ${op} ${num2} = ${num1+num2}`);
                 break;
             case "-":
-                alert(num1-num2);
+                alert(`${num1} ${op} ${num2} = ${num1-num2}`);
                 break;
             case "*":
-                alert(num1*num2);
+                alert(`${num1} ${op} ${num2} = ${num1*num2}`);
                 break;
             case "/":
-                alert(num1/num2);
+                alert(`${num1} ${op} ${num2} = ${num1/num2}`);
                 break;
             case "%":
-                alert(num1%num2);
+                alert(`${num1} ${op} ${num2} = ${num1%num2}`);
                 break;
                 default:
                 alert("Invalid Operator");
