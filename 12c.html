@@ -1,0 +1,31 @@
+<html>
+<body>
+  <div id="myDiv">Original content</div>
+
+  <script>
+    // Node creation
+    var newNode = document.createElement("p");
+    var textNode = document.createTextNode("New paragraph");
+    newNode.appendChild(textNode);
+
+    // Node insertion (appendChild)
+    document.getElementById("myDiv").appendChild(newNode);
+
+    // Node insertion (insertBefore)
+    var referenceNode = document.getElementById("myDiv");
+    var anotherNode = document.createElement("h1");
+    var anotherTextNode = document.createTextNode("New heading");
+    anotherNode.appendChild(anotherTextNode);
+    referenceNode.parentNode.insertBefore(anotherNode, referenceNode);
+
+    // Node replacement
+    var replaceNode = document.createElement("span");
+    var replaceTextNode = document.createTextNode("Replaced content");
+    replaceNode.appendChild(replaceTextNode);
+    referenceNode.parentNode.replaceChild(replaceNode, referenceNode);
+
+    // Node removal
+    replaceNode.parentNode.removeChild(replaceNode);
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Attribute Methods Example</title>
+</head>
+<body>
+  <div id="myDiv" class="container"></div>
+  <script>
+    const myDiv = document.getElementById('myDiv');
+    myDiv.setAttribute('data-info', 'Some information');
+    const dataInfo = myDiv.getAttribute('data-info');
+    console.log('Attribute value:', dataInfo);
+    const hasClassAttribute = myDiv.hasAttribute('class');
+    console.log('Has class attribute:', hasClassAttribute);
+    myDiv.removeAttribute('class');
+    const hasClassAttributeAfterRemoval = myDiv.hasAttribute('class');
+    console.log('Has class attribute after removal:', hasClassAttributeAfterRemoval);
+  </script>
+</body>
+</html>
