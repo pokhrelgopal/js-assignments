@@ -1,0 +1,22 @@
+
+<html>
+<body>
+    <div id="myDiv">Hello, World!</div>
+
+    <script>
+        var node = document.getElementById("myDiv");
+        console.log("Node Name: " + node.nodeName);
+        console.log("Node Type: " + node.nodeType);
+        console.log("Node Value: " + node.nodeValue);
+        console.log("Parent Node: " + node.parentNode.nodeName);
+        console.log("Child Nodes: ");
+        for (var i = 0; i < node.childNodes.length; i++) {
+            console.log(node.childNodes[i]);
+        }
+        console.log("First Child: " + node.firstChild.nodeName);
+        console.log("Last Child: " + node.lastChild.nodeName);
+        console.log("Next Sibling: " + node.nextSibling);
+        console.log("Previous Sibling: " + node.previousSibling);
+    </script>
+</body>
+</html>
