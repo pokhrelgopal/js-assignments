@@ -1,0 +1,36 @@
+<html>
+
+<body>
+    <hr>
+        <h1>Gopal Pokhrel</h1>
+        <h2>Roll no : 20</h2>
+    <script>
+        // Different ways of cookie creation
+        document.cookie = "username=John Doe"; // Setting a cookie with the name "username" and value "John Doe"
+
+        // Reading cookie
+        function getCookie(name) {
+            const cookies = document.cookie.split(";"); // Splitting all cookies into an array
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim(); // Removing any leading or trailing whitespace
+                if (cookie.startsWith(name + "=")) { // Checking if the cookie starts with the given name
+                    return cookie.substring(name.length + 1); // Returning the value of the cookie
+                }
+            }
+            return null; // Cookie not found
+        }
+
+        const username = getCookie("username");
+        console.log("Username:", username);
+
+        // Changing cookie
+        document.cookie = "username=Jane Doe"; // Updating the value of the cookie
+        console.log("Username:", getCookie("username"));
+
+        // Deleting cookie
+        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; // Setting the expiration date to a past date to delete the cookie
+
+    </script>
+</body>
+
+</html>

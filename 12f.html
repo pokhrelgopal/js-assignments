@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Districts in Unordered List</title>
+</head>
+<body>
+  <h1>Districts of My Province</h1>
+  <ul id="districtList"></ul> 
+  <hr>
+  <h1>Gopal Pokhrel</h1>
+  <h2>Roll no : 20</h2>
+  <script>
+    // Array of districts
+    const districts = [
+      'Taplejung',
+      'Ilam',
+      'Panchthar',
+      'Jhapa',
+      'Sunsari'
+    ];
+
+    // Get the <ul> element by its ID
+    const districtList = document.getElementById('districtList');
+
+    // Loop through the districts array
+    for (let i = 0; i < districts.length; i++) {
+      // Create a new <li> element for each district
+      const listItem = document.createElement('li');
+
+      // Set the text content of the <li> element to the district name
+      listItem.textContent = districts[i];
+
+      // Append the <li> element to the <ul> element
+      districtList.appendChild(listItem);
+    }
+  </script>
+</body>
+</html>

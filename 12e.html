@@ -1,0 +1,46 @@
+<html>
+
+<body>
+    <form id="myForm" action="">
+
+        <div id="form-control">
+            Book Id: <input type="text" name="" id="bookId" value="100" disabled>
+            Title: <input type="text" name="" id="title">
+            Author(s): <input type="text" name="" id="author">
+            Price: <input type="text" name="" id="price">
+        </div>
+        <button id="plus">+</button>
+        <br><br>
+        <button id="save">Save</button>
+
+    </form>
+    <hr>
+    <h1>Gopal Pokhrel</h1>
+    <h2>Roll no : 20</h2>
+    <script>
+        let myForm = document.getElementById('myForm');
+        let formControl = document.getElementById('form-control');
+        let bookId = document.getElementById('bookId');
+        let title = document.getElementById('title');
+        let author = document.getElementById('author');
+        let price = document.getElementById('price');
+        let plus = document.getElementById('plus');
+        let save = document.getElementById('save');
+
+        plus.addEventListener('click', function (e) {
+            e.preventDefault();
+            bookId.value = parseInt(bookId.value) + 1;
+            body.innerHTML = `
+            <div id="form-control">
+            Book Id: <input type="text" name="" id="bookId" value="${bookId}" disabled>
+            Title: <input type="text" name="" id="title">
+            Author(s): <input type="text" name="" id="author">
+            Price: <input type="text" name="" id="price">
+            </div>
+            `;
+
+        });
+    </script>
+</body>
+
+</html>

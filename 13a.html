@@ -1,0 +1,55 @@
+<!-- 
+    Theory
+    The given program demonstrates the creation of regular expression patterns in JavaScript and showcases the usage of functions like exec(), test(), match(), matchAll(), search(), replace(), replaceAll(), and split() for manipulating strings using regular expressions.
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Regular Expression Demo</title>
+ </head>
+ <body>
+  <h1>Gopal Pokhrel</h1>
+  <h2>Roll no : 20</h2>
+  <hr>
+
+   
+   <script>
+     // Two ways of creating regular expression pattern in JS
+     var pattern1 = /apple/;
+     var pattern2 = new RegExp('banana');
+ 
+     // Using exec()
+     var str1 = 'I have an apple.';
+     console.log(pattern1.exec(str1)); // Output: ['apple']
+ 
+     // Using test()
+     var str2 = 'I love bananas.';
+     console.log(pattern2.test(str2)); // Output: true
+ 
+     // Using match()
+     var str3 = 'I have an apple and a banana.';
+     console.log(str3.match(/an/g)); // Output: ['an', 'an']
+ 
+     // Using matchAll()
+     var str4 = 'Hello, world!';
+     console.log([...str4.matchAll(/l/g)]); // Output: [{0: "l", index: 2, input: "Hello, world!"}, {0: "l", index: 3, input: "Hello, world!"}]
+ 
+     // Using search()
+     var str5 = 'The quick brown fox';
+     console.log(str5.search(/quick/)); // Output: 4
+ 
+     // Using replace()
+     var str6 = 'Hello, World!';
+     console.log(str6.replace(/o/g, 'a')); // Output: Hella, Warld!
+ 
+     // Using replaceAll()
+     var str7 = 'Hello, World!';
+     console.log(str7.replaceAll(/o/g, 'a')); // Output: Hella, Warld!
+ 
+     // Using split()
+     var str8 = 'one,two,three,four';
+     console.log(str8.split(',')); // Output: ['one', 'two', 'three', 'four']
+   </script>
+ </body>
+ </html>
+ 

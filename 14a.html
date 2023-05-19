@@ -1,0 +1,43 @@
+<!-- 
+    Theory
+    The program demonstrates a simple HTML form with name and email input fields, and using JavaScript, it accesses the form object using document.forms, captures the input values on form submission, displays them in the console, and resets the form.
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms Object Demo</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+  <hr>
+  <h1>Gopal Pokhrel</h1>
+  <h2>Roll no : 20</h2>
+  <hr>
+  <script>
+    // Accessing the form using document.forms
+    var myForm = document.forms["myForm"];
+
+    // Adding a submit event listener to the form
+    myForm.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Accessing form input values
+      var nameValue = myForm.elements["name"].value;
+      var emailValue = myForm.elements["email"].value;
+
+      // Displaying the input values
+      console.log("Name: " + nameValue);
+      console.log("Email: " + emailValue);
+      myForm.reset();
+    });
+  </script>
+</body>
+</html>

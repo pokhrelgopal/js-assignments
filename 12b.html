@@ -19,31 +19,17 @@
     <li>Item 1</li>
     <li>Item 2</li>
   </ul>
-
+  <hr>
+        <h1>Gopal Pokhrel</h1>
+        <h2>Roll no : 20</h2>
   <script>
-    // Selecting element by ID
-    var heading = document.getElementById("myHeading");
-    console.log("Element by ID:", heading);
 
-    // Selecting elements by name
-    var usernameInput = document.getElementsByName("username")[0];
-    console.log("Elements by Name:", usernameInput);
-
-    // Selecting elements by tag type
-    var listItems = document.getElementsByTagName("li");
-    console.log("Elements by Tag Name:", listItems);
-
-    // Selecting elements by CSS class
-    var highlightedElements = document.getElementsByClassName("highlight");
-    console.log("Elements by Class Name:", highlightedElements);
-
-    // Selecting element by querySelector()
-    var firstItem = document.querySelector("li");
-    console.log("Element by querySelector():", firstItem);
-
-    // Selecting elements by querySelectorAll()
-    var allItems = document.querySelectorAll("li");
-    console.log("Elements by querySelectorAll():", allItems);
+    console.log("Element by ID:", document.getElementById("myHeading"));
+    console.log("Elements by Name:", document.getElementsByName("username")[0]);
+    console.log("Elements by Tag Name:", document.getElementsByTagName("li"));
+    console.log("Elements by Class Name:", document.getElementsByClassName("highlight"));
+    console.log("Element by querySelector():", document.querySelector("li"));
+    console.log("Elements by querySelectorAll():", document.querySelectorAll("li"));
   </script>
 </body>
 </html>

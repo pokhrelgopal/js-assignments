@@ -1,0 +1,40 @@
+<!-- 
+  Theory
+  This code demonstrates a series of regular expression tests in JavaScript, checking various patterns such as uppercase first character, presence of specific characters, string formats, symbol inclusion, absence of special characters or digits, email validation, vowel existence, digit constraints, and case-insensitive matching of specific substrings.
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Regex Patterns Test</title>
+</head>
+
+<body>
+  <h1>Gopal Pokhrel</h1>
+  <h2>Roll no : 20</h2>
+  <hr>
+  <script>
+    function testRegex(pattern, value) {
+      var regex = new RegExp(pattern);
+      return regex.test(value);
+    }
+    console.log(testRegex("^[A-Z].*", "world")); 
+    console.log(testRegex(".*[?-].*", "NoSpecialChars")); 
+    console.log(testRegex("^[Aa].*[.!]$", "Example sentence.")); 
+    console.log(testRegex("^.* .*$", "This is a test")); 
+    console.log(testRegex("^\\D*$", "1234")); 
+    console.log(testRegex(".*[,@$\\_\\%!\\*&\\^~+\\(\\)\\{\\}\\[\\].:]+.*", "String with $ symbol")); 
+    console.log(testRegex("^[a-zA-Z]*$", "OnlyLetters")); 
+    console.log(testRegex("^\\w+@\\w+.*$", "noatsymbol.com")); 
+    console.log(testRegex("^[^0-9].*$", "StartsWithLetter")); 
+    console.log(testRegex("^[_a-zA-Z].*$", "StartsWithSymbol")); 
+    console.log(testRegex("^BCA-TU-[0-9]*$", "BCA-TU-12345")); console.log(testRegex("^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$", "example@example.com")); 
+    console.log(testRegex(".*[aeiouAEIOU].*", "Has vowels")); 
+    console.log(testRegex("^[1-9][0-9]{9}$", "1234567890")); 
+    console.log(testRegex("^\\w+@[a-zA-Z_]+?\\.edu\\.np$", "example@university.edu.np")); 
+    console.log(testRegex("^\\w+@(gmail|yahoo)\\..*$", "example@gmail.com")); 
+    console.log(testRegex(".*nepal.*", "Welcome to USA!")); 
+  </script>
+</body>
+
+</html>
